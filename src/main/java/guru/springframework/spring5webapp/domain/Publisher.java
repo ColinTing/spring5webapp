@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Objects;
 
 /**
  * Created by jt on 12/23/19.
@@ -43,7 +44,7 @@ public class Publisher {
 
         Publisher publisher = (Publisher) o;
 
-        return id != null ? id.equals(publisher.id) : publisher.id == null;
+        return Objects.equals(id, publisher.id);
     }
 
     @Override
